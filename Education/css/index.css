@@ -1,0 +1,93 @@
+article {
+    background-image: url("../images/borderPastel.png");
+    background-size: 100% 100%;
+    position:absolute;
+    z-index: 1;
+}
+.box {
+    position:relative;
+    margin-top:4rem;
+    margin-bottom: 8.5rem;
+    z-index:0;
+}
+section {
+    height: 45rem;
+    padding-bottom: 0.5rem;
+}
+.footer {
+    margin-top: -2rem;
+}
+
+/* version large Desktop */
+
+
+/* version medium Desktop */
+@media screen and (min-width:980px)  {
+    article {
+        width: 900px;
+        height:35rem;
+        margin-top:1rem ;
+        left:24%;
+    }
+    .box {
+        width: 800px;
+        margin-left:6.7rem ;
+        left: 24%;
+    }
+}
+
+/* version small Desktop */
+@media screen and (min-width:768px)  and (max-width:979px) {
+    section {
+        height:39rem;
+    }
+    article {
+        width: 700px;
+        height:29rem;
+        margin-top:1rem ;
+        left:10%;
+    }
+    .box {
+        width: 500px;
+        margin-left:6.7rem ;
+        left: 10%;
+        margin-bottom: 9.5rem;
+    }
+}
+/* version tablette */
+    @media screen and (max-width:767px) and (min-width:480px) {
+        section{
+            height:29rem;
+        }
+        article {
+            height:24rem;
+            margin-top:1rem ;
+            left:6%;
+        }
+        .box {
+            width: 365px;
+            margin-left:6.7rem ;
+            left: 6%;
+            margin-bottom: 7rem;
+    }
+
+}
+
+/* version téléphone mobile */
+@media screen and (max-width:480px) {
+    section {
+        height:15rem;
+    }
+    article {
+        width:300px;
+        margin-top: 1rem;
+        height: 12rem;
+        left:3rem;
+    }
+    .box {
+        width: 200px;
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+        left: 6rem;
+    }
+}

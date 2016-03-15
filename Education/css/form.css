@@ -1,0 +1,58 @@
+
+.title,.bloc,.onsuccess,.error, form input {
+    font-family:Kunstler Script;
+    font-size:3.5rem;
+    font-weight:bold;
+}
+form {
+    padding-top:7%;
+}
+button {
+    color: black;
+    font-weight: bold;
+    float: right;
+    background-color: transparent;
+    border: hidden;
+    padding-bottom: 1rem;
+}
+button:hover {
+    color: white;
+}
+.title {
+    display:inline;
+    margin-left:45%;
+    border-bottom:3px solid white;
+}
+.bloc {
+    padding-left:7rem;
+    padding-top:4rem;
+    width:90%;
+}
+form input  {
+    border:none;
+    width:60%;
+    background-color:transparent;
+    padding-left:5%;
+    color:white;
+}
+.error {
+    padding-top: 15rem;
+    text-align: center;
+    color:red;
+}
+.onsuccess {
+    color:lime;
+    text-align:center;
+    padding-top:14rem;
+}
+/* version tablette */
+@media screen and (max-width:680px) {
+    .title,.bloc,.onsuccess,.error, form input {font-size:2.5rem; }
+    .bloc {padding-left:4rem;  padding-top:3.5rem;}
+    article {height:26rem;}
+}
+/* version téléphone mobile */
+@media screen and (max-width:360px) {
+
+
+}

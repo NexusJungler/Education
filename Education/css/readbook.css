@@ -1,0 +1,381 @@
+
+/* CSS all */
+
+article {
+    width:56%;
+    background-image: url("../images/ardoise.png");
+    background-size: 100% 100%;
+    padding: 5rem 0 5rem 4rem;
+    margin: 0 2rem 0 1rem;
+    float:right;
+    height: 45rem;
+}
+
+.tableread {
+    height:100%;
+    overflow:scroll;
+    overflow-x:hidden;
+    padding-right: 4rem ;
+}
+aside {
+    float:left;
+    /* box-shadow: inset 0 0 30px 0 black;*/
+}
+.photo {
+    margin:1.5rem auto 0 auto;
+    width:30%;
+    height:25%;
+    border:2px solid black;
+}
+img {
+      height: 100%;
+}
+h3 {
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+}
+.student {
+    width:500px;
+    height:30rem;
+    background: url("../images/BlocNote.png") no-repeat;
+    background-size: 100% 100%;
+    margin-top: 3rem;
+}
+.student h2 {
+    text-align: center;
+    font-size: 2.7rem;
+    margin-left:1rem;
+}
+.info {
+    font-size: 1.1rem;
+    margin-left: 25%;
+    margin-top: 3.3rem;
+    font-weight: bold;
+    text-align: inherit;
+    line-height: 0.84;
+}
+.info span {
+    color:blue;
+}
+.info p {
+    padding-bottom: 0.45rem;
+}
+label {
+    background-image: url("../images/textureSelect.png");
+    border:1px solid black;
+    font-size: 1.5rem;
+    text-align: center;
+    display:block;
+    font-weight:bold;
+    margin: 0.5rem auto 0.25rem auto;
+    width:500px;
+}
+select {
+    background-color:teal;
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid blue;
+    margin: 0 auto 1rem auto;
+    color: blue;
+}
+.main {
+    width:100%;
+    border:4px solid teal;
+}
+th {
+    border-bottom:4px solid teal;
+    border-right:4px solid teal;
+    padding-top: 0.5rem;
+    font-size: 1.5rem;
+    height: 3rem;
+    vertical-align: middle;
+}
+td {
+    border-right:4px teal;
+    text-align: center;
+    padding-top: 0.5rem;
+    vertical-align: middle;
+    height: 90px;
+}
+ td:first-child {
+    width:465px;
+     text-align: inherit;
+     padding-left: 2rem;
+     vertical-align: top;
+}
+td:nth-child(2) {
+     border: 4px solid #009595;
+ }
+th:last-child {
+    width:30%;
+}
+.date td:nth-child(2){
+     border:none;
+}
+input {
+    float: left;
+}
+.date td:first-child {
+    width: inherit;
+    padding-left: inherit;
+    vertical-align:middle;
+    font-size: inherit;
+  }
+.date {
+    color: #000033;
+    font-weight: bold;
+    padding-top: inherit;
+}
+.date td {
+    padding-left: 0.5rem;
+    width: 5rem;
+}
+.fleche {
+    float: left;
+    background-image: url("../images/Chevron1.png");
+    background-size: 100% 100%;
+    width:80px;
+    height:80px;
+    margin-right: -1rem;
+    transform: rotate(90deg);
+}
+.droite {
+    float:right;
+    transform: rotate(270deg);
+}
+.fleche:hover {
+    background-image: url("../images/Chevron2.png");
+}
+.yellow {
+    background-color: yellow;
+}
+.orange {
+    background-color: orange;
+}
+.green {
+    background-color: green;
+}
+.red {
+    color:red;
+}
+td.redBg {
+    background-color: red;
+    height:2rem;
+}
+.false {
+    font-size: 4rem;
+}
+  ul.newsticker {
+      padding-top: 4rem;
+  }
+  canvas {
+      margin-top: -3rem;
+  }
+/* version large desktop */
+@media screen and (min-width:1200px) {
+    article {
+        margin: 0 auto 0 0;
+    }
+    #page {
+        width:1500px;
+        margin: 0 auto;
+    }
+    select {
+        width: 450px;
+    }
+    label {
+        width: 450px;
+    }
+}
+    /* version medium desktop */
+@media screen and (min-width:980px) and (max-width: 1199px)  {
+    #page {
+        width:1100px;
+        margin: 0 auto;
+    }
+    article {
+        width: 600px;
+        padding:5rem 1rem 5rem 2rem;
+       margin-right: 0;
+    }
+    aside {
+        width:400px;
+    }
+    label {
+     width: 400px;
+    }
+    select {
+        width: 400px;
+    }
+    .student  {
+        width:100%;
+        background-size: 100% 100%;
+    }
+}
+
+/* version small desktop */
+@media screen and (max-width:979px)  and (min-width:768px) {
+    article {
+        width:720px;
+        height:40rem;
+        float: none;
+        padding:5rem 1rem 5rem 2rem;
+        margin:4rem auto 5rem auto;
+    }
+    aside {
+        float:none;
+        margin: 0;
+    }
+    .tableread {
+        padding-right:1rem;
+    }
+    .student {
+        width: 450px;
+        background-size: 100% 100%;
+        margin: 3rem auto 1rem auto;
+    }
+    .info {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-left: 22%;
+        line-height: 1.1rem;
+    }
+    .student h2 {
+        font-size: 2.6rem;
+        padding-top: 0.4rem;
+    }
+    .fleche {
+        width:60px;
+        height:60px;
+    }
+    label {
+        width: 440px;
+        padding:0.75rem 0 0.75rem 0;
+        font-size: 1rem;
+    }
+    select {
+        width:440px;
+        font-size: 0.9rem;
+        padding:0.25rem 0 0.25rem 0;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    th {
+        font-size: 1rem;
+    }
+    td:first-child {
+        height:3rem;
+        font-size: 0.7rem;
+        padding-left: 0.5rem;
+    }
+}
+
+/* version tablette */
+@media screen and (max-width:767px) and (min-width: 481px) {
+    article {
+        width:500px;
+         float: none;
+        margin:-2rem auto 5rem auto;
+        padding:2rem 0 3rem 1rem;
+    }
+    aside {
+        float: none;
+    }
+    .student {
+        width:450px;
+        background-size: 100% 90%;
+         margin: 2rem auto 1rem auto;
+    }
+    .info {
+        font-size: 0.9rem;
+    }
+    label {
+        width:440px;
+        font-size:1rem;
+        padding-bottom:0.75rem;
+        padding-top:0.75rem;
+    }
+    select {
+        font-size: 0.75rem;
+        width: 440px;
+        padding-bottom:0.25rem;
+        padding-top:0.25rem;
+    }
+    h2 {
+        padding-top: 0.25rem;
+        font-size: 2.6rem !important;
+    }
+    h3 {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        font-weight: normal;
+    }
+}
+
+/* version téléphone mobile */
+@media screen and (max-width:480px) {
+    article {
+        width:350px;
+        height:25rem;
+        float: none;
+        margin:-9rem auto 5rem auto;
+        padding:2rem 0 3rem 1rem;
+    }
+    aside {
+        float: none;
+    }
+    .photo {
+        height:18%;
+    }
+    .tableread {
+        padding-right:1rem;
+    }
+    .student {
+        background-size: 100% 70%;
+        width:275px;
+        margin: 2rem auto 1rem auto;
+    }
+    .info {
+        margin-top: 2.6rem;
+        font-size: 0.75rem;
+        line-height: 0.6rem;
+        font-weight: bold;
+    }
+    .student h2 {
+        font-size: 2rem;
+        padding-top: 0.25rem;
+    }
+    .fleche {
+        width:50px;
+        height:50px;
+    }
+    label {
+        width: 270px;
+        font-size: 0.7rem;
+        padding-bottom:0.5rem;
+        padding-top:0.5rem;
+    }
+    select {
+        font-size: 0.8rem;
+        width: 270px;
+    }
+    h3 {
+        font-size: 0.8rem;
+        padding-bottom: 1rem;
+    }
+    th {
+        font-size: 0.75rem;
+        height: 2rem;
+    }
+    td:first-child {
+        height: 2rem;
+        font-size: 0.5rem;
+        padding-left: 0.5rem;
+        width: 65%;
+    }
+}
+

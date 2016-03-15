@@ -1,0 +1,39 @@
+article {
+    width:55%;
+    background-image: url("../images/ardoise.png");
+    background-size: 100% 100%;
+    padding: 5rem 0 5rem 4rem;
+    margin: 0 auto ;
+    height: 27rem;
+}
+section{
+    height:45rem;
+}
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2rem;
+    padding-bottom: 3rem;
+}
+h3 {
+    text-decoration: underline;
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+}
+.response {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+}
+.tableread {
+    height:100%;
+    overflow:scroll;
+    overflow-x:hidden;
+    padding-right: 4rem ;
+}
+.green {
+    color:lime;
+}
+.red {
+    color:darkred;
+}
