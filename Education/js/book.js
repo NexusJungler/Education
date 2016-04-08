@@ -76,7 +76,6 @@ var book = {
         for (var i=0; i<json.length; i++) {
             this.classContent.push(json[i]);
         }
-      // this.bdd.init('.tableread', true, 'ajax/validate.php', 'id=' + this.classContent[this.stInd] + '&c=' + this.catInd);
     },
     selectDis: function () {
         var newVal = this.discSelect.value;
@@ -295,7 +294,7 @@ var book = {
         console.log(this.bdd.getdata());
         this.table.innerHTML = '<canvas id="myChart" width="750" height="750"></canvas>';
         var ctx = document.querySelector('#myChart').getContext("2d");
-        // graph.init(this.bdd.getdata());
+        graph.init(this.bdd.getdata());
         return new Chart(ctx).Radar(graph, {
                 pointLabelFontSize: 15,
                 pointLabelFontStyle: 'bold',
