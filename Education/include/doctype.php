@@ -1,14 +1,17 @@
 <?php
 require_once 'vendor/autoload.php';
 session_start();
-/* unset($_SESSION['login']) ; */
+
 if (!isset($_SESSION['login'])) {
     $_SESSION['login'] = [
         "alpha"  => 0,
         "pseu" => '',
         "pass" => ''
     ];
-    // on peut aussi commencer par déclarer un tableau vide pour la clé 'login' et ensuite affecter chaque variable du tableau avec la syntaxe $_SESSION['login'][$var] = $value
+}
+if (isset($_SESSION['photopath']))  {
+    unlink($_SESSION['photopath']);
+    unset($_SESSION['photopath']);
 }
 
 ?>
@@ -19,6 +22,6 @@ if (!isset($_SESSION['login'])) {
     <title><?= $title; ?></title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/liScroll.css">
+    <link href='https://fonts.googleapis.com/css?family=Mr+Dafoe' rel='stylesheet' type='text/css'>
 
 
