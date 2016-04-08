@@ -131,7 +131,7 @@ var book = {
                 this.tampon[i]['intitule'] = this.bdd.getdata()[i].intitule;
                 this.tampon[i]['id'] = this.bdd.getdata()[i].id;
             }
-            this.bdd.init('.tableread', true, 'ajax/validate.php', 'id=' + this.classContent[this.stInd] + '&c=' + this.catID[this.catInd]);
+            this.reload();
         }
     },
     renderTab: function() {
@@ -220,7 +220,7 @@ var book = {
         if (this.bdd.getdata().photo == '') {this.bdd.getdata().photo = 'nophoto.jpg';}
         html += '<div class="photo"><img src="upload/' + this.bdd.getdata().photo + '" alt="photo indisponible"></div> <div class="fleche"></div> <div class="fleche droite"></div><div class="info"><p>Nom: <span>' + this.bdd.getdata().nom + '</span></p><p>Prénom: <span>' + this.bdd.getdata().prenom + '</span></p><p>Adresse: <span>' + this.bdd.getdata().num + ', ' + this.bdd.getdata().voie + '</span></p><p><span>' + this.bdd.getdata().complement + '</span></p><p><span>' + this.bdd.getdata().cpost + ' ' + this.bdd.getdata().ville + '</span></p><p>Age: <span>' + this.bdd.getdata().age + '</span></p><p>Réussite: <span>' + this.bdd.getdata().succes+ '%</span></p></div>';
         this.panel.innerHTML = html;
-        this.bdd.init('.tableread', true, 'ajax/validate.php', 'id=' + this.classContent[this.stInd] + '&c=' + this.catID[this.catInd]);
+        this.reload();
         // l'événement click n'est plus écouté, les flèches ont disparu
         this.studSelect = document.querySelectorAll('.fleche');
         for (var i = 0; i < this.studSelect.length; i++) {
@@ -326,8 +326,7 @@ var book = {
         this.bdd.init('article button', true, 'ajax/autovalidate.php', params);
     },
     reload: function() {
-        console.log(this.bdd.getdata());
-        this.bdd.init('.tableread', true, 'ajax/validate.php', 'id=' + this.classContent[this.stInd] + '&c=' + this.catInd);
+        this.bdd.init('.tableread', true, 'ajax/validate.php', 'id=' + this.classContent[this.stInd] + '&c=' + this.catID[this.catInd]);
         }
 };
 
