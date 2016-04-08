@@ -81,6 +81,7 @@ require_once 'include/footer.php';
     <script>
         var Terminator = Object.create(Skynet);
         var Jungle = Object.create(book);
+        Jungle.classID = <?= $_GET['cl']?>;
         Jungle.init();
     </script>
 <?php
