@@ -291,8 +291,39 @@ var book = {
                 pointLabelFontStyle: 'bold',
                 pointLabelFontColor: 'black' }
         );
-    }
-
+    },
+     selectElement: function(evt) {
+        var cible = evt.target;
+        if(cible.classList.contains('action')) {
+            cible.classList.remove('action');
+            for(var key in this.autovalidate) {
+                var value = this.autovalidate[key];
+                 if(value == cible.id ) {this.autovalidate.splice(key, 1);}
+            }
+        } else {
+            cible.classList.add('action');
+            this.autovalidate.push(cible.id);
+        }
+        if(this.autovalidate.length>0 && this.query.classList.contains('invisible')) {
+            this.query.classList.remove('invisible');
+        }
+        if(this.autovalidate.length == 0 && !this.query.classList.contains('invisible')) {
+            this.query.classList.add('invisible');
+        }
+    },
+    autovalid: function() {
+        var params = 'stud=' + this.classContent[this.stInd] + '&';
+        for(var i=0; i<this.autovalidate.length; i++) {
+            params += 'data[]=' + this.autovalidate[i];
+            if (this.autovalidate.length != i+1) {params += '&';}
+        }
+        this.autovalidate = [];
+        this.bdd.init('article button', true, 'ajax/autovalidate.php', params);
+    },
+    reload: function() {
+        console.log(this.bdd.getdata());
+        this.bdd.init('.tableread', true, 'ajax/validate.php', 'id=' + this.classContent[this.stInd] + '&c=' + this.catInd);
+        }
 };
 
 
