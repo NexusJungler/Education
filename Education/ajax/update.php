@@ -104,7 +104,7 @@
                     $validate->setFKcompensationB(1);
                     $validate->setFKcompensationC(1);
                     $validate->setFKetat(2);
-                   // $query->insert($validate);
+                    $query->insert($validate);
                 } else {
                     $updateok = true;
                     $html .= 'une nouvelle fois par l\'élève, ce qui porte à ' . $state. ' le nombre de ses bons résultats.</p>';
