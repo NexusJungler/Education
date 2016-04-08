@@ -1,0 +1,101 @@
+/* version large Desktop */
+article {
+    background: url("../images/ardoise.png");
+    background-size: 100% 100%;
+    height:34em;
+}
+.title {
+    margin-left: 35%;
+}
+button {
+    margin-right: 6.5rem;
+    margin-top: 6.5rem;
+    width: 7.5rem;
+    font-size: 1.2rem;
+}
+
+/* version medium Desktop */
+@media screen and (min-width:980px) and (max-width:1199px)  {
+    article  {
+        height:30rem;
+        width: 850px;
+    }
+    .title,.bloc,.onsuccess,.error, form input {
+        font-size:3rem;
+    }
+    form {
+        padding-top:5%;
+    }
+    button {
+        margin-right: 5rem;
+        margin-top:6.1rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* version small Desktop */
+@media screen and (min-width:768px)  and (max-width:979px) {
+    article {
+        height:27rem;
+        width:750px;
+    }
+    .title,.bloc,.onsuccess,.error, form input {
+        font-size:2.5rem;
+    }
+    button {
+        margin-right:4rem;
+        margin-top:4.5rem;
+        font-size: 1rem;
+    }
+}
+/* version tablette */
+@media screen and (max-width:767px) and (min-width:481px) {
+    article {
+        height:20rem;
+        width: 500px;
+        margin-top: 1rem;
+    }
+    .title,.bloc,.onsuccess,.error, form input {
+        font-size:2rem;
+    }
+    .title {
+        margin-left: 33%;
+    }
+    .bloc {
+        padding-top: 2.5rem;
+        padding-left: 3rem;
+    }
+    button {
+        margin-right:1.4rem;
+        margin-top:3.7rem;
+        font-size: 0.8rem;
+    }
+}
+/* version téléphone mobile */
+@media screen and (max-width:480px) {
+    article {
+        width:300px;
+        margin-top: 1rem;
+        height: 13rem;
+        left:3rem;
+    }
+    form {
+        padding-top: 8%;
+    }
+    .title,.bloc,.onsuccess,.error, form input {
+        font-size:1.5rem;
+    }
+    .bloc {
+        padding-top: 1.5rem;
+        padding-left: 2rem;
+    }
+    .title {
+        border-bottom:2px solid white;
+        margin-left:30%;
+    }
+    button {
+        margin-right:-0.7rem;
+        margin-top:1.75rem;
+        font-size: 0.5rem;
+    }
+}
