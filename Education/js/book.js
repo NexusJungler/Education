@@ -13,7 +13,7 @@ var book = {
     compID: 0,
     stInd: 0,
     add:0,
-    classID: 53,
+    classID: null,
     classContent: [],
     doc:null,
     choice:[],
@@ -21,16 +21,21 @@ var book = {
     tampon:[],
     catID: [],
     means: [],
+    autovalidate: [],
+    query: null,
 
     init: function () {
 
         this.discSelect = document.querySelector('#S1');
         this.catSelect = document.querySelector('#S2');
         this.table = document.querySelector('.tableread');
+        this.query = document.querySelector('article button');
         this.discSelect.addEventListener('change', this.selectDis.bind(this));
         this.catSelect.addEventListener('change', this.selectCat.bind(this));
         this.discSelect.addEventListener('dataReady', this.printCat.bind(this));
         this.catSelect.addEventListener('dataReady', this.printCptce.bind(this));
+        this.query.addEventListener('click', this.autovalid.bind(this));
+        this.query.addEventListener('dataReady', this.reload.bind(this));
 
         if(this.create) {
             var addbut = document.querySelector('#add');
