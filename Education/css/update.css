@@ -7,7 +7,7 @@ article {
     height: 27rem;
 }
 section{
-    height:45rem;
+    height:53rem;
 }
 h2 {
     text-align: center;
@@ -36,4 +36,50 @@ h3 {
 }
 .red {
     color:darkred;
+}
+.console {
+    background-color: black;
+    border: 7px solid gray;
+    width:400px;
+    height:12rem;
+    margin:0 auto;
+    padding:1rem 0 1rem 1rem;
+    color:white;
+    font-family: Arial;
+    font-size:0.8rem;
+}
+.script {
+    overflow:scroll;
+    overflow-x:hidden;
+    height:100%;
+}
+.console h3 {
+    color: green;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding-bottom: 1rem;
+}
+.console h3 span {
+    color: purple;
+}
+section>p+p {
+   width: 6rem;
+    margin: 0 auto;
+}
+#showme {
+    font-weight: bold;
+    border: 4px solid black;
+}
+#showme:hover {
+    color:white;
+    background-color:teal;
+}
+#hideme {
+    float: right;
+    margin-top: -1.4rem;
+    font-weight: bold;
+}
+#hideme:hover {
+    color:white;
+    background-color: black;
 }
