@@ -250,20 +250,25 @@ var book = {
             this.add ++;
         }
     },
-    removeContent:function() {
-        this.doc.removeChild(this.doc.lastElementChild);
+    removeContent:function(evt) {
+        var cible = evt.target.parentNode.parentNode;
+        var next = cible.nextElementSibling;
+        var elem = parseInt(cible.firstElementChild.innerHTML, 10);
+        this.doc.removeChild(cible);
+        for(var i=0; i<this.add-elem; i++) {
+            next.firstElementChild.innerHTML = (elem+i).toString();
+            next = next.nextElementSibling;
+        }
         this.add--;
         if(this.add == 0) {
             this.doc.innerHTML = '';
-        }
-    },
+        },
     savedoc: function() {
         var params = 'data[]=' + this.classID + '&' + 'data[]=' + this.add + '&';
         for(var i=0; i<this.add; i++) {
             params += 'data[]=' + this.choice[i];
             if (i != this.add-1) {params += '&';}
         }
-        console.log(params);
         window.location.href = 'sendpdf.php?' + params;
     },
      insertParam: function(key, value)  {
