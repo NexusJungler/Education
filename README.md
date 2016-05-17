@@ -32,6 +32,7 @@ Dépendances :
  Librairies Imagick, GhostScript, QrCode[ZXing] et Html2pdf
 
 
+Remerciements :
+--------------------
 
-
-
+  A Didier et Gaston pour leur collaborations actives et à Laurent pour son soutien et son professionnalisme.
